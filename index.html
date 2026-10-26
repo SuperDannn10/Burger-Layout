@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 04 – Tasty Burger Layout</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Lab Instruction Header (from assignment slide) -->
+  <header class="lab-header">
+    <h1 class="lab-title">Lab 04 – Tasty Burger Layout</h1>
+    <p class="lab-subtitle">Develop a UI for out Tasty Burger Shop</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" aria-label="Tasty Burger Home">
+        <img src="images/logo.png" alt="Tasty Burger" class="logo-img" />
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">ABOUT</a></li>
+          <li><a href="#menu" class="nav-link active">OUR MENU</a></li>
+          <li><a href="#shop" class="nav-link">SHOP</a></li>
+          <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+
+        <!-- Shopping Bag with Badge -->
+        <button type="button" class="cart-button" id="cartBtn" aria-label="Shopping Cart">
+          <svg
+            class="cart-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">2</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="main-content">
+    <section class="hero-section">
+      <h2 class="section-title">OUR CRAZY BURGERS</h2>
+      <p class="section-description">
+        Get ready for a wild ride of flavors! Our crazy burgers are loaded with juicy patties, bold toppings, and irresistible sauces, all stacked on a perfectly toasted bun. Whether you like it cheesy, or extra meaty, we've got a burger that will blow your mind!
+      </p>
+    </section>
+
+    <!-- 4 Burger Cards Grid -->
+    <section class="burgers-grid-container" aria-label="Burger Menu">
+      <div class="burgers-grid">
+
+        <!-- Card 1: Crispy Chicken -->
+        <article class="burger-card">
+          <div class="card-image-wrapper">
+            <img src="images/crispy-chicken.png" alt="Crispy Chicken" class="card-image" />
+          </div>
+          <div class="card-content">
+            <div class="card-rating-row">
+              <div class="stars-wrapper" aria-label="5 out of 5 stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+              </div>
+              <button type="button" class="fav-button" aria-label="Add to favorites">
+                <svg class="heart-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+            <h3 class="burger-title">Crispy Chicken</h3>
+            <p class="burger-description">Chicken breast, chilli sauce, tomatoes, pickles, coleslaw</p>
+            <div class="card-footer">
+              <button type="button" class="price-badge-btn" data-name="Crispy Chicken" data-price="99.15">
+                $99.15
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Ultimate Bacon -->
+        <article class="burger-card">
+          <div class="card-image-wrapper">
+            <img src="images/ultimate-bacon.png" alt="Ultimate Bacon" class="card-image" />
+          </div>
+          <div class="card-content">
+            <div class="card-rating-row">
+              <div class="stars-wrapper" aria-label="4 out of 5 stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star empty">☆</span>
+              </div>
+              <button type="button" class="fav-button" aria-label="Add to favorites">
+                <svg class="heart-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+            <h3 class="burger-title">Ultimate Bacon</h3>
+            <p class="burger-description">House patty, cheddar cheese, bacon, onion, mustard</p>
+            <div class="card-footer">
+              <button type="button" class="price-badge-btn" data-name="Ultimate Bacon" data-price="99.32">
+                $99.32
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Black Sheep -->
+        <article class="burger-card">
+          <div class="card-image-wrapper">
+            <img src="images/black-sheep.png" alt="Black Sheep" class="card-image" />
+          </div>
+          <div class="card-content">
+            <div class="card-rating-row">
+              <div class="stars-wrapper" aria-label="4 out of 5 stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star empty">☆</span>
+              </div>
+              <button type="button" class="fav-button" aria-label="Add to favorites">
+                <svg class="heart-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+            <h3 class="burger-title">Black Sheep</h3>
+            <p class="burger-description">American cheese, tomato relish, avocado, lettuce, red onion</p>
+            <div class="card-footer">
+              <button type="button" class="price-badge-btn" data-name="Black Sheep" data-price="69.15">
+                $69.15
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Vegan Burger -->
+        <article class="burger-card">
+          <div class="card-image-wrapper">
+            <img src="images/vegan-burger.png" alt="Vegan Burger" class="card-image" />
+          </div>
+          <div class="card-content">
+            <div class="card-rating-row">
+              <div class="stars-wrapper" aria-label="3 out of 5 stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star empty">☆</span>
+                <span class="star empty">☆</span>
+              </div>
+              <button type="button" class="fav-button" aria-label="Add to favorites">
+                <svg class="heart-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.8">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+            <h3 class="burger-title">Vegan Burger</h3>
+            <p class="burger-description">House patty, cheddar cheese, bacon, onion, mustard</p>
+            <div class="card-footer">
+              <button type="button" class="price-badge-btn" data-name="Vegan Burger" data-price="99.25">
+                $99.25
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Toast Notification -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script>
+    // Wishlist Favorite Toggle
+    document.querySelectorAll('.fav-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('favorited');
+        const icon = btn.querySelector('.heart-icon');
+        if (btn.classList.contains('favorited')) {
+          icon.setAttribute('fill', '#ef4444');
+          icon.setAttribute('stroke-width', '0');
+        } else {
+          icon.setAttribute('fill', 'none');
+          icon.setAttribute('stroke-width', '1.8');
+        }
+      });
+    });
+
+    // Add to Cart functionality
+    let cartCount = 2;
+    const cartBadge = document.getElementById('cartBadge');
+    const toast = document.getElementById('toast');
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 2400);
+    }
+
+    document.querySelectorAll('.price-badge-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        cartCount++;
+        cartBadge.textContent = cartCount;
+        showToast('Added ' + btn.dataset.name + ' to cart!');
+      });
+    });
+  </script>
+</body>
+</html>
